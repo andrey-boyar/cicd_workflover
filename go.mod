@@ -1,6 +1,5 @@
-module github.com/andrey-boyar/cicd_workflover
-
-go 1.22.1
+module cicd_workflover
+go 1.23
 
 require (
 	github.com/stretchr/testify v1.9.0
