@@ -1,4 +1,4 @@
-module cicd_workflover
+module github.com/andrey-boyar/cicd_workflover
 
 go 1.22.1
 
