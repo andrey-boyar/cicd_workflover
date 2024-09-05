@@ -4,13 +4,13 @@ jobs:
   lint:
     runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: actions/setup-go@v4
 
-    - name: Run golangCI-Lint
-      uses: golangci/golangci-lint-action@v3
-      with:
-        paths: './...'
+    #- name: Run golangCI-Lint
+    - uses: golangci/golangci-lint-action@v3
+       with:
+         paths: './...'
 
   test:
     runs-on: ubuntu-latest
