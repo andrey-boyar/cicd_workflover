@@ -1,5 +1,9 @@
 name: golang-pipeline
-on: push
+#on: push
+on:
+  push:
+    tags:
+      - 'v*' #  Запускает deploy только при push  с  тегами, начинающимися  с  "v"
 
 jobs:
   #lint:
