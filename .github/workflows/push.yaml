@@ -8,9 +8,10 @@ jobs:
       - uses: actions/checkout@v3
       #- uses: actions/setup-go@v4
       - name: Run golangCI-Lint
-        uses: golangci/golangci-lint-action@v3
-         with:
-          paths: './...'
+        uses:
+          golangci/golangci-lint-action@v3
+          #with:
+          #paths: './...'
 
   test:
     runs-on: ubuntu-latest
