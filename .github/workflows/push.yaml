@@ -9,8 +9,8 @@ jobs:
 
     #- name: Run golangCI-Lint
     - uses: golangci/golangci-lint-action@v3
-       with:
-         paths: './...'
+      with:
+        paths: './...'
 
   test:
     runs-on: ubuntu-latest
