@@ -1,7 +1,8 @@
 name: golang-pipeline
 on: push
-tags: |
-  - 'v*'
+push:
+  tags:
+    - 'v*'
 jobs:
   #lint:
   #runs-on: ubuntu-latest
