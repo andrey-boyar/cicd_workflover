@@ -17,9 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     container: golang:1.23
     steps:
-      - uses: actions/checkout@v3
-      #- name: Run golangCI-Lint
-      # uses: golangci/golangci-lint-action@v3
+      - uses: actions/checkout@v4
+      - name: Vet
+        run: |
+          go vet ./...
 
       - name: Run Tests
         run: GOOS=linux GOARCH=amd64 go test -v ./...
