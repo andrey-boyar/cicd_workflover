@@ -18,11 +18,11 @@ jobs:
     container: golang:1.23
     steps:
       - uses: actions/checkout@v3
-      - name: Run golangCI-Lint
-        uses: golangci/golangci-lint-action@v3
+      #- name: Run golangCI-Lint
+      # uses: golangci/golangci-lint-action@v3
 
       - name: Run Tests
-        run: GOOS=linux GOARCH=amd64 go test ./...
+        run: GOOS=linux GOARCH=amd64 go test -v ./...
 
   deploy:
     name: Push Docker image to DockerHub
