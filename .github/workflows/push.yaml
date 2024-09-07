@@ -1,23 +1,11 @@
 name: golang-pipeline
-#on: push
-on:
-  push:
-    tags:
-      - 'v*'
+on: push
+#on:
+#push:
+#tags:
+# - 'v*'
 
 jobs:
-  #lint:
-  #runs-on: ubuntu-latest
-  #container: golang:1.23
-  #steps:
-  #- uses: actions/checkout@v3
-  #- uses: actions/setup-go@v4
-  #- name: Run golangCI-Lint
-  #uses:
-  #golangci/golangci-lint-action@v3
-  #with:
-  #paths: './...'
-
   test:
     runs-on: ubuntu-latest
     container: golang:1.23
