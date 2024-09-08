@@ -2,15 +2,17 @@ FROM golang:1.23
 
 WORKDIR /app
 
-#COPY . .
+COPY . .
+
 RUN go mod tidy
+
+RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /my_app . main.go parcel.go
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /my_app main.go parcel.go
 
-COPY tracker.db ./
-
+#COPY tracker.db ./
 #EXPOSE 8080
 
 CMD ["/my_app"]
