@@ -1,6 +1,6 @@
 FROM golang:1.23
 
-WORKDIR /app
+WORKDIR /my_app
 
 COPY . .
 
@@ -12,4 +12,4 @@ COPY tracker.db ./
 
 #EXPOSE 8080
 
-CMD ["./my_app"]
+CMD ["/my_app"]
